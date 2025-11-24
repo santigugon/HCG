@@ -14,7 +14,7 @@
     />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/hcg-logo.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
@@ -55,6 +55,7 @@
       }
 
       .organization-card {
+        overflow: hidden;
         background: #f8f9fa;
         border: 2px solid #e9ecef;
         border-radius: 12px;
@@ -84,6 +85,14 @@
         margin-bottom: 15px;
         line-height: 1.6;
       }
+      .show-on-mobile {
+        display: none !important;
+        height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        visibility: hidden !important;
+      }
 
       .organization-card a {
         font-size: 14px;
@@ -101,8 +110,29 @@
         text-decoration: underline;
       }
 
+      .organization-card img {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+        margin-top: 15px;
+      }
+
       .carousel-item {
         padding: 40px 0;
+      }
+
+      .carousel-item.show-on-mobile:not(.active) {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+        visibility: hidden !important;
+        position: absolute !important;
+        width: 0 !important;
+        opacity: 0 !important;
       }
 
       .carousel-control-prev,
@@ -155,35 +185,65 @@
         border-radius: 6px;
       }
 
+      /* Hide indicators 4, 5, 6 on desktop (show only first 3) */
+      @media (min-width: 768px) {
+        .carousel-indicators button:nth-child(n+4) {
+          display: none;
+        }
+      }
+
+      .show-on-mobile.active {
+        display: none !important;
+      }
+
       @media (max-width: 992px) {
         .carousel-control-prev {
           left: -55px;
         }
 
         .carousel-control-next {
-          right: -55px;
+          right: 10px;
         }
       }
 
       @media (max-width: 768px) {
         .carousel-control-prev,
         .carousel-control-next {
+            display: block;
           width: 40px;
           height: 40px;
-          left: 10px;
-          right: 10px;
+
         }
 
         .carousel-control-prev {
-          left: 10px;
+          left: 5px;
         }
 
         .carousel-control-next {
-          right: 10px;
+            right: 5px;
+
         }
 
         .organization-card {
           padding: 25px 20px;
+        }
+        .filler-div {
+          height: 30px !important;
+        }
+
+        .carousel-item.show-on-mobile.active {
+          display: block !important;
+          height: auto !important;
+          min-height: auto !important;
+          padding: 40px 0 !important;
+          visibility: visible !important;
+          position: relative !important;
+          width: 100% !important;
+          opacity: 1 !important;
+        }
+
+        .col-12.col-md-6.show-on-mobile {
+          display: block !important;
         }
       }
     </style>
@@ -294,12 +354,30 @@
                 data-bs-slide-to="2"
                 aria-label="Slide 3"
               ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="5"
+                aria-label="Slide 6"
+              ></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="container">
                   <div class="row g-4">
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6">
                       <div class="organization-card">
                         <h5>CANICA A.C.</h5>
                         <p>Apoyo integral a niños con cáncer</p>
@@ -309,12 +387,11 @@
                         <img
                           src="../canica.png"
                           alt="CANICA"
-                          width="auto"
-                          height="200px"
+                          class="img-fluid"
                         />
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6 d-none d-md-block">
                       <div class="organization-card">
                         <h5>Nariz Roja A.C.</h5>
                         <p>Medicamentos, hospedaje y campañas de recaudación</p>
@@ -327,18 +404,18 @@
                         <img
                           src="../narizroja.jpg"
                           alt="Nariz Roja"
-                          width="auto"
-                          height="200px"
+                          class="img-fluid"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="carousel-item">
                 <div class="container">
                   <div class="row g-4">
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6">
                       <div class="organization-card">
                         <h5>Fundación Voluntariado HCG</h5>
                         <p>Ropa, alimentos, kits de higiene</p>
@@ -348,10 +425,10 @@
                           style="display: block; margin-bottom: 10px"
                           >📘 Facebook: Voluntariado HCG</a
                         >
-                        <div style="height: 200px"></div>
+                        <div class="filler-div" style="height: 200px"></div>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6 d-none d-md-block">
                       <div class="organization-card">
                         <h5>Casa de la Misericordia A.C.</h5>
                         <p>Hospedaje temporal para familias foráneas</p>
@@ -362,16 +439,17 @@
                           style="display: block; margin-bottom: 10px"
 
                         >
-                        <div style="height: 200px"></div>
+                        <div class="filler-div" style="height: 200px"></div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="carousel-item">
                 <div class="container">
                   <div class="row g-4">
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6">
                       <div class="organization-card">
                         <h5>FEMEXER</h5>
                         <p>Enfermedades raras, orientación y especialistas</p>
@@ -384,12 +462,11 @@
                         <img
                           src="../FEMEXER.png"
                           alt="FEMEXER"
-                          width="auto"
-                          height="200px"
+                          class="img-fluid"
                         />
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-12 col-md-6 d-none d-md-block">
                       <div class="organization-card">
                         <h5>Asociación Ale</h5>
                         <p>Apoyo a pacientes renales y trasplantes</p>
@@ -402,14 +479,127 @@
                         <img
                           src="../asociacionAle.png"
                           alt="Asociación Ale"
-                          width="auto"
-                          height="200px"
+                          class="img-fluid"
                         />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="carousel-item ">
+                <div class="container">
+                  <div class="row g-4">
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                      <div class="organization-card">
+                        <h5>CANICA A.C.</h5>
+                        <p>Apoyo integral a niños con cáncer</p>
+                        <a href="https://canica.org.mx" target="_blank"
+                          >🌐 https://canica.org.mx</a
+                        >
+                        <img
+                          src="../canica.png"
+                          alt="CANICA"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="organization-card">
+                        <h5>Nariz Roja A.C.</h5>
+                        <p>Medicamentos, hospedaje y campañas de recaudación</p>
+                        <a
+                          href="https://narizroja.org"
+                          target="_blank"
+                          style="display: block; margin-bottom: 10px"
+                          >🌐 https://narizroja.org</a
+                        >
+                        <img
+                          src="../narizroja.jpg"
+                          alt="Nariz Roja"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row g-4">
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                      <div class="organization-card">
+                        <h5>Fundación Voluntariado HCG</h5>
+                        <p>Ropa, alimentos, kits de higiene</p>
+                        <a
+                          href="https://www.facebook.com/VoluntariadoHCG"
+                          target="_blank"
+                          style="display: block; margin-bottom: 10px"
+                          >📘 Facebook: Voluntariado HCG</a
+                        >
+                        <div class="filler-div" style="height: 200px"></div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="organization-card">
+                        <h5>Casa de la Misericordia A.C.</h5>
+                        <p>Hospedaje temporal para familias foráneas</p>
+                        <a
+                          href="https://canica.org.mx/casafuentedemisericordia"
+                          target="_blank"
+                          >🌐 https://canica.org.mx/casafuentedemisericordia</a
+                          style="display: block; margin-bottom: 10px"
+
+                        >
+                        <div class="filler-div" style="height: 200px"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row g-4">
+                    <div class="col-12 col-md-6 d-none d-md-block">
+                      <div class="organization-card">
+                        <h5>FEMEXER</h5>
+                        <p>Enfermedades raras, orientación y especialistas</p>
+                        <a
+                          href="https://www.femexer.org/"
+                          target="_blank"
+                          style="display: block; margin-bottom: 10px"
+                          >🌐 https://www.femexer.org/</a
+                        >
+                        <img
+                          src="../FEMEXER.png"
+                          alt="FEMEXER"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="organization-card">
+                        <h5>Asociación Ale</h5>
+                        <p>Apoyo a pacientes renales y trasplantes</p>
+                        <a
+                          href="https://asociacionale.org.mx/"
+                          target="_blank"
+                          style="display: block; margin-bottom: 10px"
+                          >🌐 https://asociacionale.org.mx/</a
+                        >
+                        <img
+                          src="../asociacionAle.png"
+                          alt="Asociación Ale"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
             <button
               class="carousel-control-prev"
