@@ -1,0 +1,23 @@
+.faq-container .faq-item .faq-content {
+  display: none !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-container .faq-item.faq-active .faq-content {
+  display: block !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-container .faq-item .faq-content a {
+  color: white !important;
+}
+
+.nav-link.active {
+  color: white !important;
+}
+
+@media (min-width: 1000px) {
+  .nav-link.active {
+    color: var(--accent-color) !important;
+  }
+}
