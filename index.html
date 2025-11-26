@@ -58,8 +58,8 @@
             >
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
-          <a href="https://www.facebook.com/HospitalCivilGuadalajara/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/hospitalcivilgdl" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com/HospitalCivilGuadalajara/" target="_blank" class="facebook"><i class="bi bi-facebook fs-3 me-2"></i></a>
+          <a href="https://www.instagram.com/hospitalcivilgdl" target="_blank" class="instagram"><i class="bi bi-instagram fs-3 me-2"></i></a>
         </div>
       </div>
       </div>
@@ -119,8 +119,8 @@
             data-aos="fade-down"
             data-aos-delay="100"
           >
-            <h2>HOSPITAL CIVIL DE GUADALAJARA</h2>
-            <p class="bg-light bg-opacity-50 rounded-3 p-3">
+            <h2 class="bg-white bg-opacity-75 rounded-4 p-3 shadow-lg" style="display:inline-block;backdrop-filter:blur(6px);">HOSPITAL CIVIL DE GUADALAJARA</h2>
+            <p class="bg-white bg-opacity-75 rounded-4 p-4 shadow-lg" style="backdrop-filter: blur(6px);">
               El Hospital Civil de Guadalajara es una
               institución pública de alta especialidad, dedicada a brindar
               atención médica integral y humana a niños, adolescentes y adultos.
@@ -210,13 +210,13 @@
                           href="https://www.facebook.com/HospitalCivilGuadalajara/"
                           target="_blank"
                           class="text-decoration-none"
-                          ><i class="bi bi-facebook"></i>Hospital Civil de Guadalajara</a
+                          ><i class="bi bi-facebook fs-3 me-2"></i>Hospital Civil de Guadalajara</a
                         ><br />
                         <a
                           href="https://www.instagram.com/hospitalcivilgdl"
                           target="_blank"
                           class="text-decoration-none"
-                          ><i class="bi bi-instagram"></i>@hospitalcivilgdl</a
+                          ><i class="bi bi-instagram fs-3 me-2"></i>@hospitalcivilgdl</a
                         >
                       </p>
                   </div>
@@ -230,7 +230,40 @@
         </div>
       </section>
       <!-- /Hero Section -->
-
+ <section id="accesos" class="section quick-access">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up" data-aos-duration="800">
+          <h2>¿Qué servicio necesitas?</h2>
+          <p>Accesos rápidos a los servicios más consultados por pacientes y familias.</p>
+        </div>
+        <div class="quick-access-grid" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+          <a href="#contact" class="quick-access-card text-decoration-none">
+            <i class="bi bi-exclamation-triangle"></i>
+            <span>Urgencias</span>
+          </a>
+          <a href="#doctors" class="quick-access-card text-decoration-none">
+            <i class="bi bi-heart-pulse"></i>
+            <span>Trasplantes</span>
+          </a>
+          <a href="#services" class="quick-access-card text-decoration-none">
+            <i class="bi bi-capsule"></i>
+            <span>Oncología</span>
+          </a>
+          <a href="#appointment" class="quick-access-card text-decoration-none">
+            <i class="bi bi-calendar-check"></i>
+            <span>Citas y Horarios</span>
+          </a>
+          <a href="#appointment" class="quick-access-card text-decoration-none">
+            <i class="bi bi-droplet"></i>
+            <span>Donación de sangre</span>
+          </a>
+          <a href="#contact" class="quick-access-card text-decoration-none">
+            <i class="bi bi-geo-alt"></i>
+            <span>Ubicación</span>
+          </a>
+        </div>
+      </div>
+    </section>
     <!-- About Section -->
     <section id="about" class="about section">
       <div class="container">
@@ -249,6 +282,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
+              
           </div>
 
             <div
@@ -365,7 +399,7 @@
       <div class="container section-title" data-aos="fade-up">
           <h2>Especialidades Pediátricas</h2>
           <p>
-            El Hospital Civil Nuevo cuenta con una de las redes pediátricas más completas del país
+            El Hospital Civil Nuevo cuenta con una de las redes pediátricas más completas del país, haz click en las tarjetas para más información.
           </p>
         </div>
         <!-- End Section Title -->
@@ -381,7 +415,7 @@
                 <div class="icon">
                   <i class="fas fa-stethoscope"></i>
                 </div>
-                <a href="#" class="stretched-link">
+                <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalOncologia">
                   <h3>Oncología Pediátrica</h3>
                 </a>
               </div>
@@ -397,7 +431,7 @@
               <div class="icon">
                   <i class="fas fa-vial"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalHematologia">
                   <h3>Hematología Pediátrica</h3>
               </a>
             </div>
@@ -413,7 +447,7 @@
               <div class="icon">
                   <i class="fas fa-filter"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalNefrologia">
                   <h3>Nefrología Pediátrica</h3>
               </a>
             </div>
@@ -429,7 +463,7 @@
               <div class="icon">
                   <i class="fas fa-baby"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalNeonatologia">
                   <h3>Neonatología</h3>
               </a>
             </div>
@@ -445,7 +479,7 @@
               <div class="icon">
                   <i class="fas fa-procedures"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalUCIP">
                   <h3>UCIP – Unidad de Cuidados Intensivos Pediátricos</h3>
               </a>
             </div>
@@ -461,7 +495,7 @@
               <div class="icon">
                   <i class="fas fa-ambulance"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalUrgencias">
                   <h3>Urgencias Pediátricas</h3>
               </a>
             </div>
@@ -477,7 +511,7 @@
               <div class="icon">
                   <i class="fas fa-user-md"></i>
               </div>
-              <a href="#" class="stretched-link">
+              <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalCirugia">
                   <h3>Cirugía Pediátrica</h3>
               </a>
             </div>
@@ -493,7 +527,7 @@
                 <div class="icon">
                   <i class="fas fa-heart"></i>
         </div>
-                <a href="#" class="stretched-link">
+                <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalPaliativos">
                   <h3>Cuidados Paliativos</h3>
                 </a>
               </div>
@@ -509,7 +543,7 @@
                 <div class="icon">
                   <i class="fas fa-heartbeat"></i>
       </div>
-                <a href="#" class="stretched-link">
+                <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalGastroCardioEndocrino">
                   <h3>Gastroenterología, Cardiología y Endocrinología Pediátrica</h3>
                 </a>
               </div>
@@ -525,7 +559,7 @@
                 <div class="icon">
                   <i class="fas fa-fire"></i>
                 </div>
-                <a href="#" class="stretched-link">
+                <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#modalQuemados">
                   <h3>Unidad de Quemados Pediátrica</h3>
                 </a>
               </div>
@@ -533,6 +567,178 @@
             <!-- End Service Item -->
           </div>
         </div>
+
+        <!-- MODALES DE ESPECIALIDADES PEDIÁTRICAS -->
+        <div class="modal fade" id="modalOncologia" tabindex="-1" aria-labelledby="modalOncologiaLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalOncologiaLabel">Oncología Pediátrica</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Atención integral para niñas, niños y adolescentes con cáncer, incluyendo diagnóstico oportuno, tratamiento con quimioterapia, hospital de día y coordinación con el servicio de trasplante de médula ósea.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalHematologia" tabindex="-1" aria-labelledby="modalHematologiaLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalHematologiaLabel">Hematología Pediátrica</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Manejo especializado de enfermedades de la sangre como leucemias, anemias graves y trastornos de la coagulación en pacientes pediátricos, con laboratorio y estudios de alta complejidad.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalNefrologia" tabindex="-1" aria-labelledby="modalNefrologiaLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalNefrologiaLabel">Nefrología Pediátrica</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Diagnóstico y tratamiento de enfermedades renales en la infancia, incluyendo insuficiencia renal aguda y crónica, seguimiento de pacientes trasplantados y coordinación con la unidad de hemodiálisis pediátrica.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalNeonatologia" tabindex="-1" aria-labelledby="modalNeonatologiaLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalNeonatologiaLabel">Neonatología</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Unidad especializada en la atención de recién nacidos prematuros o con complicaciones graves al nacimiento, ofreciendo cuidados intensivos y seguimiento temprano del desarrollo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalUCIP" tabindex="-1" aria-labelledby="modalUCIPLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalUCIPLabel">UCIP – Unidad de Cuidados Intensivos Pediátricos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Área equipada para la atención de pacientes pediátricos en estado crítico, con monitoreo avanzado, soporte respiratorio y manejo por un equipo multidisciplinario altamente capacitado.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalUrgencias" tabindex="-1" aria-labelledby="modalUrgenciasLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalUrgenciasLabel">Urgencias Pediátricas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Servicio disponible las 24 horas para la atención inmediata de niñas y niños con enfermedades agudas, traumatismos o descompensaciones de padecimientos crónicos.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCirugia" tabindex="-1" aria-labelledby="modalCirugiaLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalCirugiaLabel">Cirugía Pediátrica</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Procedimientos quirúrgicos especializados para población pediátrica, desde cirugías de urgencia hasta intervenciones programadas de alta complejidad.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalPaliativos" tabindex="-1" aria-labelledby="modalPaliativosLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalPaliativosLabel">Cuidados Paliativos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Atención centrada en el alivio del dolor y otros síntomas en niñas y niños con enfermedades avanzadas, acompañando también el bienestar emocional y espiritual de la familia.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalGastroCardioEndocrino" tabindex="-1" aria-labelledby="modalGastroCardioEndocrinoLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalGastroCardioEndocrinoLabel">Gastroenterología, Cardiología y Endocrinología Pediátrica</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Conjunto de subespecialidades que atienden enfermedades digestivas, cardiacas y endocrinas en la infancia, con seguimiento cercano y estudios de alta especialidad.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalQuemados" tabindex="-1" aria-labelledby="modalQuemadosLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalQuemadosLabel">Unidad de Quemados Pediátrica</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <p>Atención integral para niñas y niños con quemaduras graves, con áreas especiales de aislamiento, control del dolor, rehabilitación y apoyo psicológico.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /MODALES DE ESPECIALIDADES PEDIÁTRICAS -->
       </section>
       <!-- /Services Section -->
 
@@ -724,6 +930,7 @@
                   </div>
                 </div>
               </div>
+              
               <div class="tab-pane" id="departments-tab-3">
                 <div class="row">
                   <div class="col-lg-8 details order-2 order-lg-1">
@@ -1313,8 +1520,8 @@
             <p><strong>Página oficial:</strong> <span><a href="http://www.hcg.gob.mx" target="_blank">www.hcg.gob.mx</a></span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href="https://www.facebook.com/HospitalCivilGuadalajara/" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/hospitalcivilgdl" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/HospitalCivilGuadalajara/" target="_blank"><i class="bi bi-facebook fs-3 me-2"></i></a>
+            <a href="https://www.instagram.com/hospitalcivilgdl" target="_blank"><i class="bi bi-instagram fs-3 me-2"></i></a>
           </div>
         </div>
 
