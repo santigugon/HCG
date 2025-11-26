@@ -1,0 +1,20 @@
+[build]
+  publish = "."
+  command = "# No build command needed for static site"
+
+[[plugins]]
+  package = "@netlify/plugin-git-gateway"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Redirect /admin to /admin/index.html
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+# Enable Netlify Identity
+[build.processing]
+  skip_processing = false
+
